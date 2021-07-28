@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Referencing the External DTD file -->
+<!-- <!DOCTYPE Store SYSTEM "catalog_19031382.dtd"> -->
+
+<!-- Referencing the CSS file to render the XML in the browser -->
+<?xml-stylesheet type="text/css" href="catalog_19031382.css"?>
+
+<!-- Root Element Store with Schema file reference -->
+<Store category="Music Store" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="catalog_19031382.xsd">
+
+    <!-- Child element that contains all the info on the store  -->
+    <StoreDetails>
+        <!-- Empty Logo Element to be used in the CSS to render the store logo in the browser -->
+        <Logo />
+        <!-- Name of the Store -->
+        <Name>Zer0 Music Store</Name>
+        <!-- Store Description  -->
+        Zero Music Store was founded in Nepal as a full-service music store in 2015 AD.
+        <!-- Web Address -->
+        <Website>https://www.zero-music.com</Website>
+        <!-- Store Location  -->
+        <Address branch="Bhaktapur">Lokanthali-16, Bhaktapur</Address>
+        <!-- Store Contact Details -->
+        <Contact type="Telephone">01-6635825</Contact>
+        <Contact type="Mobile">977-9841998265</Contact>
+    </StoreDetails>
+
+    <!-- Element declared For displaying Song List using the CSS -->
+    <SongTitle>Song List</SongTitle>
+
+    <!-- Element contain multiple child element Song  -->
+    <Songs>
+        <!-- Element that contains information on a Song with a unique SongID  -->
+        <Song songID="s1" lang="np">
+            <!-- Song Title  -->
+            <Title>Chinta</Title>
+            <!-- Song Description  -->
+            <Description>A song by the band Tribal Rain.</Description>
+            <!-- Song Genre  -->
+            <Genre>Jazz</Genre>
+            <!-- Song Album | A song can have multiple Album -->
+            <Album>Roka Yo Samay</Album>
+            <!-- Song CoverImage  -->
+            <CoverImage ciID="s1" />
+            <!-- Song Duration in HH:MM:SS -->
+            <Duration>00:02:22</Duration>
+            <!-- Song Release Date  -->
+            <ReleaseDate>
+                <Month>Feb</Month>
+                <Day>15</Day>
+                <Year>2015</Year>
+            </ReleaseDate>
+            <!-- Song Director  -->
+            <Director>Kenneth Adhikari</Director>
+            <!-- Song Producer  -->
+            <Producer>Prawes Lama</Producer>
+            <!-- Song Writer  -->
+            <Writer>Rahul Rai</Writer>
+            <!-- All the Singers of the Song -->
+            <Singers>
+                <!-- Singer of the Song with their role  -->
+                <Singer role="Lead" title="Mr">
+                    <FName>Rahul</FName>
+                    <LName>Rai</LName>
+                </Singer>
+                <!-- Singer of the Song with their role  -->
+                <Singer role="Supporting">
+                    <FName>Sushant</FName>
+                    <MName>Raj</MName>
+                    <LName>Ghatani</LName>
+                </Singer>
+            </Singers>
+            <!-- Song Cinematographer  -->
+            <Cinematographer>Ram Yadav</Cinematographer>
+            <!-- Song ProductionCompany -->
+            <ProductionCompany>Universal Studio</ProductionCompany>
+            <!-- Song Streaming Sites  -->
+            <Stream>
+                <!-- Spotify Streaming Site  -->
+                <Spotify>https://open.spotify.com/track/1wxF7Ilffr7yRgoX7j2iSP</Spotify>
+                <!-- Youtube Streaming Site -->
+                <Youtube>https://www.youtube.com/watch?v=UAJvI6h-I54</Youtube>
+            </Stream>
+            <!-- Song Liscense Company  -->
+            <Liscense type="Permanent">Believe A.</Liscense>
+        </Song>
+
+        <Song songID="s2" lang="en">
+            <!-- Song Title  -->
+            <Title>Stop Standing There</Title>
+            <!-- Song Description  -->
+            <Description>A song released along with her first album.</Description>
+            <!-- Song Genre  -->
+            <Genre>Rock</Genre>
+            <!-- Song Album | A song can have multiple Album -->
+            <Album>Let Go</Album>
+            <!-- Song CoverImage  -->
+            <CoverImage ciID="s2" />
+            <!-- Song Duration in HH:MM:SS -->
+            <Duration>00:03:38</Duration>
+            <!-- Song Release Date  -->
+            <ReleaseDate>
+                <Month>Jan</Month>
+                <Day>29</Day>
+                <Year>2002</Year>
+            </ReleaseDate>
+            <!-- Song Director  -->
+            <Director>Jack Sparrow</Director>
+            <!-- Song Producer  -->
+            <Producer>Stormzy</Producer>
+            <!-- Song Writer  -->
+            <Writer>Avril Lavigne</Writer>
+            <!-- All the Singers of the Song -->
+            <Singers>
+                <!-- Singer of the Song with their role  -->
+                <Singer role="Lead" title="Mrs">
+                    <FName>Avril</FName>
+                    <LName>Lavigne</LName>
+                </Singer>
+            </Singers>
+            <!-- Song Cinematographer  -->
+            <Cinematographer>Chris Morris</Cinematographer>
+            <!-- Song ProductionCompany -->
+            <ProductionCompany>Universal Studio</ProductionCompany>
+            <!-- Song Streaming Sites  -->
+            <Stream>
+                <!-- Apple Music Streaming Site -->
+                <AppleMusic>https://applemusic.com/track/1wxF7Ilffr7yasdoX7j2iSP</AppleMusic>
+                <!-- Youtube Streaming Site -->
+                <Youtube>https://www.youtube.com/watch?v=98Tv-CTx--A</Youtube>
+            </Stream>
+            <!-- Song Liscense Company  -->
+            <Liscense type="Permanent">SME | UMPG Publisher</Liscense>
+            <!-- Song Rating -->
+            <Rating>10.0</Rating>
+        </Song>
+
+        <Song songID="s3" lang="en">
+            <!-- Song Title  -->
+            <Title>Drugs</Title>
+            <!-- Song Description  -->
+            <Description>A song by EDEN released on is birthday.</Description>
+            <!-- Song Genre  -->
+            <Genre>Country Music</Genre>
+            <!-- Song CoverImage  -->
+            <CoverImage ciID="s3" />
+            <!-- Song Duration in HH:MM:SS -->
+            <Duration>00:06:00</Duration>
+            <!-- Song Release Date  -->
+            <ReleaseDate>
+                <Month>Aug</Month>
+                <Day>07</Day>
+                <Year>2021</Year>
+            </ReleaseDate>
+            <!-- Song Director  -->
+            <Director>Ed Sheeran</Director>
+            <!-- Song Producer  -->
+            <Producer>Rapthor</Producer>
+            <!-- Song Writer  -->
+            <Writer>Jonathon Ng</Writer>
+            <!-- All the Singers of the Song -->
+            <Singers>
+                <!-- Singer of the Song with their role  -->
+                <Singer role="Lead" title="Mr">
+                    <FName>Jonathon</FName>
+                    <MName>EDEN</MName>
+                    <LName>Ng</LName>
+                </Singer>
+                <!-- Singer of the Song with their role  -->
+                <Singer role="Supporting" title="Mr">
+                    <FName>Ed</FName>
+                    <LName>Sheeran</LName>
+                </Singer>
+            </Singers>
+            <!-- Song Cinematographer  -->
+            <Cinematographer>Julia Michaels</Cinematographer>
+            <!-- Song ProductionCompany -->
+            <ProductionCompany>Warner Bros</ProductionCompany>
+            <!-- Song Streaming Sites  -->
+            <Stream>
+                <!-- Apple Music Streaming Site -->
+                <AppleMusic>https://applemusic.com/track/1wxF7Ilffr7yRgo213j2iSP</AppleMusic>
+                <!-- Youtube Streaming Site -->
+                <Youtube>https://www.youtube.com/watch?v=IjZ75qI5BOk</Youtube>
+            </Stream>
+            <!-- Song Liscense Company  -->
+            <Liscense type="Temporary">LatinAutor | Warner Chappell</Liscense>
+
+        </Song>
+
+        <Song songID="s4" lang="en">
+            <!-- Song Title  -->
+            <Title>Dive</Title>
+            <!-- Song Description  -->
+            <Description>A song from the album Divide.</Description>
+            <!-- Song Genre  -->
+            <Genre>Pop Music</Genre>
+            <!-- Song Album | A song can have multiple Album -->
+            <Album>Divide</Album>
+            <!-- Song CoverImage  -->
+            <CoverImage ciID="s4" />
+            <!-- Song Duration in HH:MM:SS -->
+            <Duration>00:03:38</Duration>
+            <!-- Song Release Date  -->
+            <ReleaseDate>
+                <Month>Dec</Month>
+                <Day>02</Day>
+                <Year>2018</Year>
+            </ReleaseDate>
+            <!-- Song Director  -->
+            <Director>Benny Bianco</Director>
+            <!-- Song Producer  -->
+            <Producer>Benny Bianco</Producer>
+            <!-- Song Writer  -->
+            <Writer>Julia Michaels</Writer>
+            <!-- All the Singers of the Song -->
+            <Singers>
+                <!-- Singer of the Song with their role  -->
+                <Singer role="Lead" title="Mr">
+                    <FName>Ed</FName>
+                    <LName>Sheeran</LName>
+                </Singer>
+                <!-- Singer of the Song with their role  -->
+                <Singer role="Lead" title="Mrs">
+                    <FName>Benny</FName>
+                    <MName>kun</MName>
+                    <LName>Bianco</LName>
+                </Singer>
+                <!-- Singer of the Song with their role  -->
+                <Singer role="Supporting" title="Ms">
+                    <FName>Sita</FName>
+                    <MName>Kumari</MName>
+                    <LName>Yadav</LName>
+                </Singer>
+            </Singers>
+            <!-- Song ProductionCompany -->
+            <ProductionCompany>Universal Studio</ProductionCompany>
+            <!-- Song Streaming Sites  -->
+            <Stream>
+                <!-- Spotify Streaming Site  -->
+                <Spotify>https://open.spotify.com/track/1wxF7Ilffr7yRgoX7j2iSP</Spotify>
+                <!-- Youtube Streaming Site -->
+                <Youtube>https://www.youtube.com/watch?v=UAasd786h-I54</Youtube>
+            </Stream>
+            <!-- Song Rating -->
+            <Rating>9.9</Rating>
+        </Song>
+
+        <Song songID="s5" lang="jp">
+            <!-- Song Title  -->
+            <Title>Up and Up</Title>
+            <!-- Song Genre  -->
+            <Genre>Dubstep</Genre>
+            <!-- Song CoverImage  -->
+            <!-- Song Album | A song can have multiple Album -->
+            <Album>Seling and Cloor</Album>
+            <Album>Cust and Hest</Album>
+            <CoverImage ciID="s5" />
+            <!-- Song Duration in HH:MM:SS -->
+            <Duration>00:05:26</Duration>
+            <!-- Song Release Date  -->
+            <ReleaseDate>
+                <Month>Sep</Month>
+                <Day>11</Day>
+                <Year>2020</Year>
+            </ReleaseDate>
+            <!-- Song Director  -->
+            <Director>Phil Harvey</Director>
+            <!-- Song Producer  -->
+            <Producer>Will Champion</Producer>
+            <!-- Song Writer  -->
+            <Writer>Jony Buckland</Writer>
+            <!-- All the Singers of the Song -->
+            <Singers>
+                <!-- Singer of the Song with their role  -->
+                <Singer role="Lead" title="Mr">
+                    <FName>Chris</FName>
+                    <LName>Martin</LName>
+                </Singer>
+            </Singers>
+            <!-- Song Cinematographer  -->
+            <Cinematographer>Kishu Maharjan</Cinematographer>
+            <!-- Song ProductionCompany -->
+            <ProductionCompany>Warner Bros</ProductionCompany>
+            <!-- Song Streaming Sites  -->
+            <Stream>
+                <!-- Youtube Streaming Site -->
+                <Youtube>https://www.youtube.com/watch?v=UAasjsfjnsdk32I54</Youtube>
+            </Stream>
+            <!-- Song Liscense Company  -->
+            <Liscense type="Temporary">Sony ATV Publishing</Liscense>
+            <!-- Song Rating -->
+            <Rating>9</Rating>
+        </Song>
+    </Songs>
+</Store>

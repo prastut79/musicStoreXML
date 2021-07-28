@@ -1,0 +1,46 @@
+<!ELEMENT Store (StoreDetails, SongTitle, Songs)>
+<!ELEMENT StoreDetails (#PCDATA|Logo|Name|Website|Address|Contact)*>
+<!ELEMENT Logo EMPTY>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Website ANY>
+<!ELEMENT Address (#PCDATA)>
+<!ELEMENT Contact (#PCDATA)>
+<!ELEMENT SongTitle (#PCDATA)>
+<!ELEMENT Songs (Song+)>
+<!ELEMENT Song (Title, Description?, Genre, Album*, CoverImage, Duration, ReleaseDate, Director, Producer, Writer, Singers, Cinematographer?, ProductionCompany, Stream, Liscense?, Rating?)>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT Description (#PCDATA)>
+<!ELEMENT Genre (#PCDATA)>
+<!ELEMENT Album (#PCDATA)>
+<!ELEMENT CoverImage EMPTY>
+<!ELEMENT Duration (#PCDATA)>
+<!ELEMENT ReleaseDate (Month, Day, Year)>
+<!ELEMENT Month (#PCDATA)>
+<!ELEMENT Day (#PCDATA)>
+<!ELEMENT Year (#PCDATA)>
+<!ELEMENT Director (#PCDATA)>
+<!ELEMENT Producer (#PCDATA)>
+<!ELEMENT Writer (#PCDATA)>
+<!ELEMENT Singers (Singer+)>
+<!ELEMENT Singer (FName, MName?, LName)>
+<!ELEMENT FName (#PCDATA)>
+<!ELEMENT MName (#PCDATA)>
+<!ELEMENT LName (#PCDATA)>
+<!ELEMENT Cinematographer (#PCDATA)>
+<!ELEMENT ProductionCompany (#PCDATA)>
+<!ELEMENT Stream ((Spotify|AppleMusic)?, Youtube)>
+<!ELEMENT Spotify ANY>
+<!ELEMENT AppleMusic ANY>
+<!ELEMENT Youtube ANY>
+<!ELEMENT Liscense (#PCDATA)>
+<!ELEMENT Rating (#PCDATA)>
+
+<!ATTLIST Store category CDATA #FIXED "Music Store">
+<!ATTLIST Address branch CDATA #IMPLIED>
+<!ATTLIST Contact type (Telephone | Mobile) #REQUIRED> 
+<!ATTLIST Song songID ID #REQUIRED>
+<!ATTLIST Song lang NMTOKEN "en">
+<!ATTLIST CoverImage ciID IDREF #REQUIRED>
+<!ATTLIST Singer role (Lead | Supporting) #REQUIRED>
+<!ATTLIST Singer title (Mr | Mrs | Ms) #IMPLIED>
+<!ATTLIST Liscense type (Temporary | Permanent) #REQUIRED>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Store">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="StoreDetails">
+          <xs:complexType mixed="true">
+            <xs:sequence>
+              <xs:element name="Logo">
+                <xs:complexType/>
+              </xs:element>
+              <xs:element name="Name" type="xs:string"/>
+              <xs:element name="Website" type="xs:anyURI"/>
+              <xs:element name="Address">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="branch" type="xs:string" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Contact" maxOccurs="5">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="type" use="required">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:enumeration value="Telephone"/>
+                            <xs:enumeration value="Mobile"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:attribute>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SongTitle" type="xs:string"/>
+        <xs:element name="Songs">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Song" maxOccurs="unbounded">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="Title" type="xs:string"/>
+                      <xs:element name="Description" type="xs:string" minOccurs="0"/>
+                      <xs:element name="Genre">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:enumeration value="Jazz"/>
+                            <xs:enumeration value="Rock"/>
+                            <xs:enumeration value="Country Music"/>
+                            <xs:enumeration value="Pop Music"/>
+                            <xs:enumeration value="Dubstep"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="Album" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                      <xs:element name="CoverImage">
+                        <xs:complexType>
+                          <xs:attribute name="ciID" type="xs:ID" use="required"/>
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element name="Duration" type="xs:time"/>
+                      <xs:element name="ReleaseDate">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="Month">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                  <xs:enumeration value="Jan"/>
+                                  <xs:enumeration value="Feb"/>
+                                  <xs:enumeration value="Mar"/>
+                                  <xs:enumeration value="Apr"/>
+                                  <xs:enumeration value="May"/>
+                                  <xs:enumeration value="Jun"/>
+                                  <xs:enumeration value="Jul"/>
+                                  <xs:enumeration value="Aug"/>
+                                  <xs:enumeration value="Sep"/>
+                                  <xs:enumeration value="Oct"/>
+                                  <xs:enumeration value="Nov"/>
+                                  <xs:enumeration value="Dec"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Day">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:int">
+                                  <xs:minInclusive value="01"/>
+                                  <xs:maxInclusive value="32"/>
+                                  <xs:pattern value=".{2}"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Year">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:int">
+                                  <xs:minInclusive value="1900"/>
+                                  <xs:maxInclusive value="2021"/>
+                                  <xs:pattern value=".{4}"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element name="Director" type="xs:string"/>
+                      <xs:element name="Producer" type="xs:string"/>
+                      <xs:element name="Writer" type="xs:string"/>
+                      <xs:element name="Singers">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="Singer" maxOccurs="unbounded">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="FName" type="xs:string"/>
+                                  <xs:element name="MName" type="xs:string" minOccurs="0"/>
+                                  <xs:element name="LName" type="xs:string"/>
+                                </xs:sequence>
+                                <xs:attribute name="role" use="required">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:enumeration value="Lead"/>
+                                      <xs:enumeration value="Supporting"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:attribute>
+                                <xs:attribute name="title" use="optional">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:enumeration value="Mr"/>
+                                      <xs:enumeration value="Mrs"/>
+                                      <xs:enumeration value="Ms"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:attribute>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element name="Cinematographer" type="xs:string" minOccurs="0"/>
+                      <xs:element name="ProductionCompany" type="xs:string"/>
+                      <xs:element name="Stream">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:choice minOccurs="0">
+                              <xs:element name="Spotify" type="xs:anyURI"/>
+                              <xs:element name="AppleMusic" type="xs:anyURI"/>
+                            </xs:choice>
+                            <xs:element name="Youtube" type="xs:anyURI"/>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element name="Liscense" minOccurs="0">
+                        <xs:complexType>
+                          <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                              <xs:attribute name="type" use="required">
+                                <xs:simpleType>
+                                  <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Temporary"/>
+                                    <xs:enumeration value="Permanent"/>
+                                  </xs:restriction>
+                                </xs:simpleType>
+                              </xs:attribute>
+                            </xs:extension>
+                          </xs:simpleContent>
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element name="Rating" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:decimal">
+                            <xs:minInclusive value="1"/>
+                            <xs:maxInclusive value="10"/>
+                            <xs:pattern value="([0-9]{1,2})|([0-9]{1,2}\.[0-9]{0,1})"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="songID" type="xs:IDREF" use="required"/>
+                    <xs:attribute name="lang" type="xs:NMTOKEN" default="en"/>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="category" type="xs:string" fixed="Music Store" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
